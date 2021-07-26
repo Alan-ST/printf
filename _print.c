@@ -19,6 +19,17 @@ int _print(const char *format, check_t functions[], va_list args)
 			for (j = 0; functions[j].character != NULL; j++)
 			{
 				if (format[i + 1] == functions[j].character[0])
+				{
+					val = functions[j].f(args);
+					if (val == -1)
+						return (-1);
+					prnt += val;
+					break;
+				}
+			}
+			if (functions[j].character == NULL && format[i + 1] != ' ')
+			{
+				if (format)
 			}
 		}
 		else
