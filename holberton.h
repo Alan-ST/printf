@@ -19,5 +19,6 @@ typedef struct charcheck
 
 int _printf(const char *format, ...);
 int _print(const char *format, check_t functions[], va_list args)
+int putachar(char c);
 
 #endif
