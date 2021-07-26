@@ -5,6 +5,15 @@
 #include <stdarg.h>
 #include <limits.h>
 
+/**
+ * struct charcheck - 
+ */
+typedef struct charcheck
+{
+	char *character;
+	int (*f)(va_list);
+} check_t;
+
 int _printf(const char *format, ...);
 
 #endif
