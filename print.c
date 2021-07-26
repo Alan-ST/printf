@@ -33,7 +33,16 @@ int _print(const char *format, check_t functions[], va_list args)
 					else
 						val += putachar(format[i]);
 				}
+				j++;
 			}
 		}
+		else
+		{
+			putachar(format[i]);
+			val++;
+		}
+		i++;
+		j = 0;
 	}
+	return (val);
 }
