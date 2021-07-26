@@ -6,7 +6,9 @@
 #include <limits.h>
 
 /**
- * struct charcheck - 
+ * struct charcheck - corresponds a character to a function
+ * @character: character
+ * @f: function
  */
 typedef struct charcheck
 {
