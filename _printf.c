@@ -20,5 +20,4 @@ int _printf(const char *format, ...)
 	i = _print(format, funls, charls)
 	va_end(charls);
 	return (i);
-
 }
