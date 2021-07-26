@@ -1,11 +1,11 @@
 #include "holberton.h"
 /**
- * _print - prints the format
+ * print - prints the format
  * @format: arguments
  * @functions: function's list
  * @args: argurment's list
  */
-int _print(const char *format, check_t functions[], va_list args)
+int print(const char *format, check_t functions[], va_list args)
 {
 	int i = 0, j = 0, val = 0;
 

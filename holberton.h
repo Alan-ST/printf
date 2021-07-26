@@ -1,5 +1,6 @@
 #ifndef HOLBERTON_H
 #define HOLBERTON_H
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <stdarg.h>
@@ -18,7 +19,7 @@ typedef struct charcheck
 } check_t;
 
 int _printf(const char *format, ...);
-int _print(const char *format, check_t functions[], va_list args);
+int print(const char *format, check_t functions[], va_list args);
 int putachar(char c);
 
 #endif

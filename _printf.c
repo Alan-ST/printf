@@ -17,7 +17,7 @@ int _printf(const char *format, ...)
 	if (format == NULL)
 		return (-1);
 	va_start(charls, format);
-	i = _print(format, funls, charls)
+	i = print(format, funls, charls)
 	va_end(charls);
 	return (i);
 }
