@@ -14,4 +14,10 @@ int _printf(const char *format, ...)
 		{"%", /*funct*/}
 	};
 
+	if (format == NULL)
+		return (-1);
+	va_start(charls, format);
+	va_end(charls);
+	return (i);
+
 }
