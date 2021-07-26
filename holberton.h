@@ -18,6 +18,6 @@ typedef struct charcheck
 } check_t;
 
 int _printf(const char *format, ...);
-int _print(const char *format, check_t funls, va_list charls);
+int _print(const char *format, check_t functions[], va_list args)
 
 #endif
