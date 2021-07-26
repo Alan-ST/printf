@@ -7,4 +7,9 @@
 int _printf(const char *format, ...)
 {
 	int i;
+	check_t funls[] = {
+		{"c", /*funct*/},
+		{"s", /*funct*/},
+		{"%", /*funct*/}
+	}
 }
