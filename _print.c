@@ -28,10 +28,20 @@ int _print(const char *format, check_t functions[], va_list args)
 			{
 				if (format[i + 1] != '\0')
 				{
-
+					putachar(format[i]);
+					putachar(format[i + 1]);
+					prnt += 2;
 				}
+				else
+					return (-1);
 			}
+			i += 1;
 		}
 		else
+		{
+			putachar(format[i]);
+			prnt++;
+		}
 	}
+	return (prnt);
 }
