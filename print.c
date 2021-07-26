@@ -18,8 +18,22 @@ int _print(const char *format, check_t functions[], va_list args)
 			if (format[i + 1] == ' ')
 				i++;
 
-			while (j < 4)
-			{}
+			while (j < 3)
+			{
+				if (format[i + 1] == functions.character[0])
+				{
+					val += functions[j].f(args);
+					i++;
+					break;
+				}
+				if (j == 2 && format[i + 1] != functions[j].character[1])
+				{
+					if (format[i + 1] == NULL)
+						return (-1);
+					else
+						val += putachar(format[i]);
+				}
+			}
 		}
 	}
 }
