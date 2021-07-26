@@ -4,6 +4,7 @@
 #include <stdlib.h>
 #include <stdarg.h>
 #include <limits.h>
+#include <unistd.h>
 
 /**
  * struct charcheck - corresponds a character to a function
@@ -17,5 +18,6 @@ typedef struct charcheck
 } check_t;
 
 int _printf(const char *format, ...);
+int _print(const char *format, check_t funls, va_list charls);
 
 #endif
