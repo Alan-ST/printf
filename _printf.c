@@ -7,9 +7,11 @@
 int _printf(const char *format, ...)
 {
 	int i;
+	va_list charls;
 	check_t funls[] = {
 		{"c", /*funct*/},
 		{"s", /*funct*/},
 		{"%", /*funct*/}
-	}
+	};
+
 }
