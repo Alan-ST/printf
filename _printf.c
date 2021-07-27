@@ -12,8 +12,8 @@ int _printf(const char *format, ...)
 		{"c", p_char},
 		{"s", p_string},
 		{"%", p_percent},
-		{"d", /*funct*/},
-		{"i", /*funct*/}
+		{"d", p_int},
+		{"i", p_int}
 	};
 
 	if (format == NULL)
