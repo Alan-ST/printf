@@ -13,6 +13,6 @@ int p_string(va_list args)
     if (str == NULL)
         str = "(null)";
     for (i = 0; str[i] != '\0'; i++)
-		putachar(s[i]);
+		putachar(str[i]);
     return (i);
 }
