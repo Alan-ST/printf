@@ -1,9 +1,9 @@
 #include "holberton.h"
 /**
- * print_percent - prints a percent sign
+ * p_percent - prints a percent sign
  * Return: 1
  */
-int print_percent(void)
+int p_percent(void)
 {
 	putachar('%');
 	return (1);
