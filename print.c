@@ -4,6 +4,7 @@
  * @format: arguments
  * @functions: function's list
  * @args: argurment's list
+ * Return: characters printed
  */
 int print(const char *format, check_t functions[], va_list args)
 {
