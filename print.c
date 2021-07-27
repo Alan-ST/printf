@@ -19,7 +19,7 @@ int print(const char *format, check_t functions[], va_list args)
 			if (format[i + 1] == ' ')
 				i++;
 
-			while (j < 3)
+			while (j < 4)
 			{
 				if (format[i + 1] == functions[j].character[0])
 				{
@@ -27,7 +27,7 @@ int print(const char *format, check_t functions[], va_list args)
 					i++;
 					break;
 				}
-				if (j == 2 && format[i + 1] != functions[j].character[1])
+				if (j == 3 && format[i + 1] != functions[j].character[1])
 				{
 					if (!format[i + 1])
 						return (-1);
