@@ -11,7 +11,7 @@ int _printf(const char *format, ...)
 	check_t funls[] = {
 		{"c", p_char},
 		{"s", p_string},
-		{"%", p}
+		{"%", p_percent}
 	};
 
 	if (format == NULL)
