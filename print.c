@@ -29,7 +29,7 @@ int print(const char *format, check_t functions[], va_list args)
 				}
 				if (j == 2 && format[i + 1] != functions[j].character[1])
 				{
-					if (format[i + 1] == NULL)
+					if (!format[i + 1])
 						return (-1);
 					else
 						val += putachar(format[i]);
