@@ -21,7 +21,7 @@ int print(const char *format, check_t functions[], va_list args)
 
 			while (j < 3)
 			{
-				if (format[i + 1] == functions.character[0])
+				if (format[i + 1] == functions[j].character[0])
 				{
 					val += functions[j].f(args);
 					i++;
