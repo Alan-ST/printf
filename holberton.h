@@ -23,5 +23,6 @@ int print(const char *format, check_t functions[], va_list args);
 int putachar(char c);
 int p_char(va_list args);
 int p_string(va_list args);
+int print_percent(void);
 
 #endif
