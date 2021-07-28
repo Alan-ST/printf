@@ -10,12 +10,16 @@ int print(const char *format, check_t functions[], va_list args)
 {
    int i = 0, j, fval, val = 0;
 
+	/*loops until the string end*/
    while (format[i] != '\0')
    {
+	   /*detect a specifier*/
        if (format[i] == '%')
        {
+		   /*check to the list of functions*/
            while (functions[j].character != NULL)
 			{
+				/*Calls the function corresponding to the specifier*/
 				if (format[i + 1] == functions[j].character[0])
 				{
 					fval = functions[j].f(args);
@@ -26,6 +30,7 @@ int print(const char *format, check_t functions[], va_list args)
 				}
                 j++;
 			}
+			/**/
             if (functions[j].character == NULL && format[i + 1] != ' ')
 			{
 				if (format[i + 1] != '\0')

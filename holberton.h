@@ -8,9 +8,9 @@
 #include <unistd.h>
 
 /**
- * struct charcheck - corresponds a character to a function
- * @character: character
- * @f: function
+ * struct charcheck - Corresponds a character to a function
+ * @character: Specifier
+ * @f: Function
  */
 typedef struct charcheck
 {
@@ -18,14 +18,15 @@ typedef struct charcheck
 	int (*f)(va_list);
 } check_t;
 
-/*Main stuffs*/
+/*Main functions*/
 int _printf(const char *format, ...);
 int print(const char *format, check_t functions[], va_list args);
-int putachar(char c);
 int p_char(va_list args);
 int p_string(va_list args);
-int p_percent(__attribute__((unused))va_list args);
+int p_percent(va_list args);
 int p_int(va_list args);
-/**/
+/*Secondary functions*/
+int putachar(char c);
 int p_num(va_list args);
+
 #endif

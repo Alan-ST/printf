@@ -6,24 +6,25 @@
 */
 int p_num(va_list args)
 {
-    int i, div = 1, len = 0;
-    unsigned int num;
+    int i, l = 0, d = 1;
+    unsigned int n;
 
     i = va_arg(args, int);
     if (i < 0)
     {
-        len += putachar('-');
-        num = i * -1;
+        l += putachar('-');
+        n = i * -1;
     }
-    else
-        num = i;
-    while (num / div > 9)
-        div *= 10;
-    while (div != 0)
+    n = i;
+
+    while (n / d > 9)
+        d *= 10;
+    
+    while (d != 0)
     {
-        len += putachar('0' + num / div);
-        num %= div;
-        div /= 10;
+        l += putachar('0' + n / d);
+        n %= d;
+        d /= 10;
     }
-    return (len);
+    return (l);
 }

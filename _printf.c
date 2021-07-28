@@ -7,7 +7,7 @@
 int _printf(const char *format, ...)
 {
 	int i;
-	va_list charls;
+	va_list strls;
 	check_t funls[] = {
 		{"c", p_char},
 		{"s", p_string},
@@ -16,11 +16,13 @@ int _printf(const char *format, ...)
 		{"i", p_int}
 	};
 
+	/*Returns Error*/
 	if (format == NULL)
 		return (-1);
 	
-	va_start(charls, format);
-	i = print(format, funls, charls);
-	va_end(charls);
+	/*Calls*/
+	va_start(strls, format);
+	i = print(format, funls, strls);
+	va_end(strls);
 	return (i);
 }
