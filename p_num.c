@@ -6,10 +6,13 @@
 */
 int p_num(va_list args)
 {
-    int i, l = 0, d = 1;
+    long int i;
+    int l, d;
     unsigned int n;
 
     i = va_arg(args, int);
+    l = 0;
+    d = 1;
     if (i < 0)
     {
         l += putachar('-');
@@ -17,7 +20,7 @@ int p_num(va_list args)
     }
     n = i;
 
-    while (n / d > 9)
+    while ((n / d) > 9)
         d *= 10;
     
     while (d != 0)

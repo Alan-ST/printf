@@ -50,6 +50,7 @@ int print(const char *format, check_t functions[], va_list args)
            val++;
        }
        i++;
+	   j = 0;
    }
    return (val);
 }
