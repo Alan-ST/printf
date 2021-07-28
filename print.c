@@ -8,42 +8,41 @@
  */
 int print(const char *format, check_t functions[], va_list args)
 {
-	int i = 0, j = 0, val = 0;
+	int i, j, v, val = 0;
 
-	while (format != NULL)
+	for (i = 0; format[i] != '\0'; i++)
 	{
 		if (format[i] == '%')
 		{
-			if (format[i + 1] == '\0')
-				return (-1);
-			if (format[i + 1] == ' ')
-				i++;
-
-			while (j < 4)
+			for (j = 0; functions[j].character != NULL; j++)
 			{
 				if (format[i + 1] == functions[j].character[0])
 				{
-					val += functions[j].f(args);
-					i++;
+					v = functions[j].f(args);
+					if (v == -1)
+						return (-1);
+					val += v;
 					break;
 				}
-				if (j == 3 && format[i + 1] != functions[j].character[1])
-				{
-					if (!format[i + 1])
-						return (-1);
-					else
-						val += putachar(format[i]);
-				}
-				j++;
 			}
+			if (functions[j].character == NULL && format[i + 1] != ' ')
+			{
+				if (format[i + 1] != '\0')
+				{
+					putachar(format[i]);
+					putachar(format[i + 1]);
+					val += 2;
+				}
+				else
+					return (-1);
+			}
+			i += 1;
 		}
 		else
 		{
 			putachar(format[i]);
 			val++;
 		}
-		i++;
-		j = 0;
 	}
 	return (val);
 }

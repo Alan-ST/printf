@@ -18,6 +18,7 @@ int _printf(const char *format, ...)
 
 	if (format == NULL)
 		return (-1);
+
 	va_start(charls, format);
 	i = print(format, funls, charls);
 	va_end(charls);
