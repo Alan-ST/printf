@@ -9,8 +9,8 @@
 int print(const char *format, check_t functions[], va_list args)
 {
    int i = 0, j, fval, val = 0;
-
-	/*Loops until the string end*/
+   
+   /*Loops until the string end*/
    while (format[i] != '\0')
    {
 	   /*Detect a specifier*/
@@ -30,7 +30,7 @@ int print(const char *format, check_t functions[], va_list args)
 				}
                 j++;
 			}
-			/**/
+			/*Reach the end of the list of functions*/
             if (functions[j].character == NULL && format[i + 1] != ' ')
 			{
 				if (format[i + 1] != '\0')
@@ -42,14 +42,14 @@ int print(const char *format, check_t functions[], va_list args)
 				else
 					return (-1);
 			}
-            i += 1;
+			i += 1;
        }
        else
        {
+		   /*just print all the string*/
            putachar(format[i]);
            val++;
        }
-	   /**/
 	   j = 0;
        i++;
    }

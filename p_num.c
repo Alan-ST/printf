@@ -28,7 +28,7 @@ int p_num(va_list args)
     while (d != 0)
     {
         /*prints a int in ASCII*/
-        l += putachar('0' + (n / d)); 
+        l += putachar('0' + (n / d));
         n %= d;
         d /= 10;
     }

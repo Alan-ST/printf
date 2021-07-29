@@ -20,8 +20,7 @@ int _printf(const char *format, ...)
 	/*Returns Error*/
 	if (format == NULL)
 		return (-1);
-	
-	/*Calls*/
+	/*Calls print function*/
 	va_start(strls, format);
 	i = print(format, funls, strls);
 	va_end(strls);

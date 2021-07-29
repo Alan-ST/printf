@@ -6,7 +6,7 @@
 */
 int p_char(va_list args)
 {
-    /*Prints a character in int (ASCII)*/
+    /*Prints a character in ASCII*/
     putachar(va_arg(args, int));
     return (1);
 }

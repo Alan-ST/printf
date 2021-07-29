@@ -28,8 +28,8 @@ You can find much more about how to use this project in our [Wiki] (https://gith
 To make use of _printf () which works the same as printf () of the linux kernel
 _printf at the moment follows the same syntax as print () and since it is in constant development, at the moment it only works with some arguments.
 
-*% c = print a character
-*% s = print a string
-* %% = print a percent
-*% d = print a integer
-*% i = print a integer
+* %c - print a character
+* %s - print a string
+* %% - print a percent
+* %d - print a integer
+* %i - print a integer
