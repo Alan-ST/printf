@@ -25,7 +25,7 @@ int p_char(va_list args);
 int p_string(va_list args);
 int p_percent(va_list args);
 int p_int(va_list args);
-/*Secondary functions*/
+/*Support functions*/
 int putachar(char c);
 int p_num(va_list args);
 
