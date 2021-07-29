@@ -10,13 +10,13 @@ int print(const char *format, check_t functions[], va_list args)
 {
    int i = 0, j, fval, val = 0;
 
-	/*loops until the string end*/
+	/*Loops until the string end*/
    while (format[i] != '\0')
    {
-	   /*detect a specifier*/
+	   /*Detect a specifier*/
        if (format[i] == '%')
        {
-		   /*check to the list of functions*/
+		   /*Check to the list of functions*/
            while (functions[j].character != NULL)
 			{
 				/*Calls the function corresponding to the specifier*/
@@ -25,7 +25,7 @@ int print(const char *format, check_t functions[], va_list args)
 					fval = functions[j].f(args);
 					if (fval == -1)
 						return (-1);
-					val += fval;
+					val += fval; 
 					break;
 				}
                 j++;
@@ -49,8 +49,9 @@ int print(const char *format, check_t functions[], va_list args)
            putachar(format[i]);
            val++;
        }
-       i++;
+	   /**/
 	   j = 0;
+       i++;
    }
    return (val);
 }

@@ -14,7 +14,7 @@
  */
 typedef struct charcheck
 {
-	char *character;
+	char *character; 
 	int (*f)(va_list);
 } check_t;
 
