@@ -2,7 +2,7 @@
 /**
 * p_string - prints a string
 * @args: args
-* Return: str
+* Return: str lenght
 */
 int p_string(va_list args)
 {

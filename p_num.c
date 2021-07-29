@@ -2,7 +2,7 @@
 /**
 * p_num - prints
 * @args: args
-* Return: num
+* Return: a num
 */
 int p_num(va_list args)
 {
