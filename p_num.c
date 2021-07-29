@@ -11,6 +11,7 @@ int p_num(va_list args)
     unsigned int n;
 
     i = va_arg(args, int);
+    /*Return a "-"*/
     if (i < 0)
     {
         l += putachar('-');
@@ -19,12 +20,15 @@ int p_num(va_list args)
     else
         n = i;
     
+    /*Looping until d == 100000*/
     while ((n / d) > 9)
         d *= 10;
     
+    /*Loops % returns a digit by modulating*/
     while (d != 0)
     {
-        l += putachar('0' + (n / d));
+        /*prints a int in ASCII*/
+        l += putachar('0' + (n / d)); 
         n %= d;
         d /= 10;
     }

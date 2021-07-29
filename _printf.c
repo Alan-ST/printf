@@ -13,7 +13,8 @@ int _printf(const char *format, ...)
 		{"s", p_string},
 		{"%", p_percent},
 		{"d", p_int},
-		{"i", p_int}
+		{"i", p_int},
+		{NULL, NULL}
 	};
 
 	/*Returns Error*/
